@@ -1,0 +1,24 @@
+allow from all
+
+
+## REDIRECTS ##
+Options -MultiViews
+Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteRule ^apps/photo-browser/css/(.*)$ ^css/$1 [L]
+RewriteRule ^apps/photo-browser/img/(.*)$ ^img/$1 [L]
+RewriteRule ^apps/photo-browser/js/(.*)$ ^js/$1 [L]
+
+
+## No html file extensions ##
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+

@@ -1,0 +1,62 @@
+/**
+ * Generic styles
+ *
+ * @author Rogier van der Linde <rogier.vanderlinde@odisee.be>
+ *
+ */
+
+/* ===========================================
+   Custom reset
+   =========================================== */
+
+html {
+	font-size: 0.625em;  
+}
+
+body {
+	-webkit-backface-visibility: hidden;
+}
+
+* {
+	margin: 0; 
+	padding: 0; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	/*-webkit-transform: translateZ(1) scale(1.0, 1.0);*/
+}
+
+fieldset {
+	border: 0;
+}
+
+/* ===========================================
+   Helpers
+   =========================================== */
+
+.structural {
+	position: absolute;
+	left: -9999px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.ir {
+	display: block;
+	background-size: 100%; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.hidden {
+	position: absolute !important;
+	visibility: hidden !important;
+	z-index: -1 !important;
+}

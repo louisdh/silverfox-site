@@ -1,0 +1,155 @@
+/*Spinner*/
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+#slider1_container {
+
+	top:370px;
+	margin: 0 auto;
+
+}
+
+.screenshot img {
+	width: 100%;
+	height: 100%;
+	border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -o-border-radius:20px;
+
+}
+
+.screenshot {
+	pointer-events:none;
+	z-index: 0;
+}
+
+#Description{
+	position: relative;
+
+	float: none;
+	margin: 30px auto;
+	width: 457px;
+	height: 1100px;
+	text-align: center;	
+}
+
+
+#Description_par1 {
+	position: absolute;
+	text-align: left;	
+	width: 300px;
+	top: 110px;
+}
+
+#Description_par1_icon {
+	position: absolute;
+	text-align: left;	
+	right: 0px;
+	top: 110px;
+}
+
+#Description_par2 {
+	position: absolute;
+	text-align: right;	
+	width: 300px;
+	right: 0px;
+	top: 250px;
+}
+
+#Description_par2_icon {
+	position: absolute;
+	text-align: left;	
+	left: 0px;
+	top: 250px;
+}
+
+#Gallery {
+	position: relative;
+	text-align: center;
+	top:350px;
+	left: 2px;
+}
+
+
+
+#AvailableOnAppStore {
+	/*position:absolute;*/
+	width:250px;
+	height:400px;
+	
+	z-index:6;
+	
+	float: none;
+	margin: 30px auto;
+
+}
+
+#AvailableOnAppStore p {
+	margin-bottom: -10px;
+
+}
+
+@media only screen and (min-width: 1182px) {
+	
+	#AvailableOnAppStore {
+		float: left;
+		margin-top:30px;
+		margin-left: 20px;
+	}
+
+	#Description{
+		float: left;
+		margin-top: 30px;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	.content {
+		height: 1300px;
+	}
+
+
+
+}

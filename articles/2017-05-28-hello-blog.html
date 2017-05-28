@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" href="../img/favicon.png" type="image/png" />
+		<meta charset="UTF-8">
+		<title>Hello blog! 🚀</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:image" content="https://silverfox.be/img/fb-share.png"/>
+		<meta name="description" content="A brief history about Silver Fox, and some fun facts." />
+		<link href="../css/library.css" rel="stylesheet">
+		<link href="../css/lightbox.css" rel="stylesheet" />
+		<link href="../css/general.css" rel="stylesheet">
+		<link href="../css/content.pages.general.css" rel="stylesheet">
+		<link href="../css/index.css" rel="stylesheet">
+		<link href="../css/article-general.css" rel="stylesheet">
+		<link href="../css/article.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="wrapper">
+				<ul>
+					<li><a href="/" class="ir" >Silver Fox</a></li>
+					<li class="active"><a href="/blog/">Blog</a></li>
+					<li><a href="/projects/">Projects</a></li>
+					<li><a href="/news/">News</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="content clearfix"><div class="article-content"><div align="center" class="article-metadata"><h1> Hello blog! 🚀</h1><p class="article-metadata-date">Sunday, 28 May 2017</p><p class="article-metadata-author">by Louis D'hauwe</p><p class="article-metadata-tags">tags: blog, markdown, swift</p></div>
+<p>
+This is the first post of the Silver Fox blog, a place where I will share interesting findings, new projects and just random thoughts. Kinda like <a href="https://twitter.com/LouisDhauwe">my Twitter feed</a>, but without a character limit.
+</p>
+<h2>Introduction</h2>
+<p>My name is Louis D'hauwe, I'm a Belgian programmer born in the late nineties. I currently work as a full time iOS developer at <a href="http://www.nextapps.be">Next Apps</a>. My full time job plus my side projects can easily add up to about 50 to 60 hours a week of writing or reading code. As of late, most of this code is Swift (though not all!). It'll be of no suprise that most posts will be about some code.</p>
+<h2>Starting a blog in 2017</h2>
+<p>For a couple of years now I've been thinking about starting a blog. Starting one is pretty easy nowadays. <a href="https://medium.com">Medium</a>, <a href="https://www.squarespace.com">Squarespace</a> and others can get you started in a matter of minutes. However, for my blog I wanted full control over the hosting as well as the design.</p>
+<h3>Static content</h3>
+<p>I decided that all I really need are static webpages. I don't need a comment section, or some admin panel to write posts. But obviously writing blogposts in HTML directly is tedious, there's need for an abstraction. The ideal candidate (from a software developer's perspective) is Markdown.</p>
+<p>Each post (including this one) is written in a Markdown file. These are converted to HTML by a Swift command line tool that I wrote myself.</p>
+<h3>Open source</h3>
+<p>I have open sourced four projects that together make this whole site possible:</p>
+<ul>
+<li>silverfox-site - the HTML, CSS &amp; JavaScript</li>
+<li>silverfox-articles - the blog posts (.md files)</li>
+<li>silverfox-news - news items about my projects (.md files)</li>
+<li>silverfox-gen - generator for the static content</li>
+</ul>
+<p>silverfox-gen is perhaps the most interesting</p>
+<h2>Getting notified</h2>
+<p>If you're interested in this blog, and would like to get notified when a new post is available, the best place is the follow <a href="https://twitter.com/SilverFoxBE">@SilverFoxBE</a> on Twitter.</p>
+		</div>
+
+		</div>
+		<footer>
+			<div class="wrapper">
+				<p>&copy;2017 Silver Fox. All rights reserved.</p>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../js/lightbox.min.js"></script>
+		<script src="../js/retina.min.js"></script>
+		<script src="../js/general.js"></script>
+		<script async src="../js/tracking.js"></script>
+		<script src="../js/content.pages.general.js"></script>
+		<script src="../js/about.js"></script>
+	</body>
+</html>

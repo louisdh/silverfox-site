@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Photo Browser</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="/photobrowser/css/library.css" rel="stylesheet" />
+	<link href="/photobrowser/css/loading.css" rel="stylesheet" />
+	<link href="/photobrowser/css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="wrapper clearfix">
+		<!-- header -->
+		<header>
+			<h1 class="ir"><a href="/index.html">Photo Browser</a></h1>
+		</header>
+
+		<!-- content -->
+		<section id="maincontent" class="clearfix">
+			<h2 class="structural">Foto albums</h1>
+			<div id="map"></div>
+			<div id="flickr-sets"></div>
+			<div id='loader-wrapper'>
+				<div id='loader'>
+					<div class='dot'></div>
+					<div class='dot'></div>
+					<div class='dot'></div>
+					<div class='dot'></div>
+					<div class='dot'></div>
+					<div class='dot'></div>
+					<div class='dot'></div>
+					<div class='dot'></div>
+				</div>
+			</div>
+			<div id="error-wrapper">
+				<p>An error occured.</p>
+			</div>
+			<div id="flipbook-wrapper">
+				<a id="closeBtn"></a>
+				<div id="book-icon-wrapper">
+					<div id="book-icon-animation"></div>
+				</div>
+				<div id="flipbook">
+					<div class="hard" depth="5">
+						<div class="book-stitch"></div>
+						<div id="book-label"><img class="fix-webkit-glitches" src="/photobrowser/img/book-label.png"><p class="fix-webkit-glitches" id="book-title"></p></div>
+					</div>
+					<div class="hard" depth="5"><p id="book-description"></p></div>
+					<div class="hard" id="back1" depth="5">
+						<img class="fix-webkit-glitches" id="ikdoeict-logo" src="/photobrowser/img/ikdoeict.png" >
+					</div>
+					<div class="hard last" id="back2" depth="5">
+						<div class="book-stitch"></div>
+						<img class="fix-webkit-glitches" id="silverfox-logo" src="/photobrowser/img/silverfox-logo.png" >
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer -->
+		<footer>
+			<h2 class="structural">Footer</h2>			
+			<p>
+				&copy;2015 Silver Fox. All rights reserved.
+			</p>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="/photobrowser/js/FontLoader.js"></script>
+	<script src="/photobrowser/js/jquery.transform2d.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBhHKFT9rJPRChthDfYm9dNMEshTqtWdA"></script>
+	<script src="/photobrowser/js/gmap3.min.js"></script>
+	<script src="/photobrowser/js/gmap_style.js"></script>
+	<script src="/photobrowser/js/turn.js"></script>
+	<script src="/photobrowser/js/index.js"></script>
+</body>
+</html>

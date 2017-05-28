@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/louisdh
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://silverfox.be
+  * I am louisdh (https://keybase.io/louisdh) on keybase.
+  * I have a public key with fingerprint 4273 FC51 0900 0AFF 5EC7  C74E 5F48 9309 DED5 41C6
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010134cb018684caf85620e8ea4c23ab739bb4879478c24febb30d997c764da776a00a",
+            "fingerprint": "4273fc5109000aff5ec7c74e5f489309ded541c6",
+            "host": "keybase.io",
+            "key_id": "5f489309ded541c6",
+            "kid": "010134cb018684caf85620e8ea4c23ab739bb4879478c24febb30d997c764da776a00a",
+            "uid": "d9ec425b21bc2a56dc89620d15999419",
+            "username": "louisdh"
+        },
+        "service": {
+            "hostname": "silverfox.be",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1491501559,
+    "expire_in": 157680000,
+    "prev": "138d0d1a5e232edafd257539ff194f04caa8877865620ea9a2fd6026b09894a4",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.68
+Comment: https://keybase.io/crypto
+
+yMIsAnicrZJdSBRRGIbXTFOhP6MgViSHRCq1+TlnZs5aZlZkQUXdZKCuZ2bOrOPa
+zrYzuyq6gVJQhmV1UYEWkRVdZHlh2Q9U/ixBGRYIFdZFhRUZ1JJUUtGZpe667Opw
+zve+z/m+l29odrIrI+njya397aWdbUkP7p0Iu8onWr42MYqpNTKeJsZPEgep04hl
+e/2GxngYlmM5AagKy8miDFSsy1DkWSITDFRewIokIEUBsoSAJKs80ImiCKyGkKRK
+ItCwJImYZTGTz+hGwEdCwZARsCkW8JKgq5BjEUvLug6JSh2AQB3ISGCRRjQIOFWk
+xhrTchy0OQVbpNAw6Ru9eBPt/UP/n/sOJ3AaIirgocJzispjKGqqjChP4yBCCHDI
+EVokFMC7CVXXmWHD0mqYaD5DHyOGSpxcnUH+CCyjLkJCutlQqBBqDYZM21TNOlqp
+se2g5XGcdmPQkdYTxfsH4lWMgEZjpA7qtgwzwHg4qlRtw6FyAHGQ5SBE+QxpCBoh
+4jUcBZREmabMOv+QCEVygqzR1jEkvMATDesaDyUoIF3nENBZmhaWZUmSxURkGGFe
+10SWFxUWyQhgwDhj7QmYlE2hNvYlJvIFsB0OESY6cLdipispw5WaMsPZL1dG+ry/
+W7dRTHMNjoxJZ/cOZi6/8MNd5c79nv00L3tRbGx05TFmvOxzO2A6ynv6F7zufjmd
+c3EkoB6PLj1QP/4m78avD5k987Jzguld6/iC2tu9Ra8V6arUOTW8I9ZcNrq9+tyW
+vBMLd21YJlx0fx4eePhzVfbjiaY5B+O1+e5i/v14b/zVk2nk2xeN37oUu1a61hdN
+rYys2VZU825u35mi88VDw/u/xVtTO2MZkzBrfXAya1nbJ39Kxx14oyUrvaQr0rnZ
+b6wYnH+k+9HYi8X4VPehqekrfT0bL/eRt6dXb898lty2ZPfN+83+eGttWsWXWfUT
+5ckl73ZOPu04fTj3TNXR68/3FFiVDdWVm34DoS5CYg==
+=VmUv
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/louisdh
+
+==================================================================

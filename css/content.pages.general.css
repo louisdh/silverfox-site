@@ -1,0 +1,204 @@
+.content {
+	background-color: #fafafa;
+	max-width: 100rem;
+	margin: 0 auto;
+	clear: both;
+	padding: 2rem;
+}
+
+.content a {
+	color: #d00000;
+}
+
+.tiles-wrapper {
+	margin-left: -2rem;
+	margin-right: -2rem;
+}
+
+.tiles-wrapper h2 {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.tile {
+	width: calc(100% - 40px);
+	max-width: 50rem;
+	height: 20rem;
+	background-color: #eee;
+	margin: 2rem auto;
+	
+
+
+	border-radius: 3rem;
+	-webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    border-radius: 3rem;
+    -khtml-border-radius: 3rem;
+	overflow: hidden;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+   	background-position: center;
+   	background-repeat: no-repeat;
+   	float: none;
+   	position: relative;
+   	overflow: hidden;
+
+
+
+   	/* http://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera */
+   	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+.tile a {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 3rem;
+	-webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    border-radius: 3rem;
+    -khtml-border-radius: 3rem;
+    z-index: 10;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+.tile div {
+	width: 100%;
+	height: 4rem;
+	position: absolute;
+	bottom: -4rem;
+	background-color: rgba(210, 40, 35, 1);
+	border-bottom-left-radius: 3rem;
+	border-bottom-right-radius: 3rem;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 0.5;
+}
+
+.tile div.hover { 
+	bottom: 0rem;
+	opacity: 1;
+	cursor: pointer;
+	/*pointer-event: click;*/
+}
+
+.tile div p {
+	color: white;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 4rem;
+	font-size: 1.4rem;
+}
+
+.tile div p::after {
+	/* arrow */
+	content:"\00a0\00a0\203A";
+}
+
+#header {
+	/*height: 40rem;*/
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+#header img {
+	width: 100%;
+}
+
+@media (min-width: 680px) {
+	.tile {
+		width: calc(50% - 4rem);
+		margin: 0rem 2rem 1.4rem 2rem;
+		float: left;
+	}
+}
+
+
+#history p {
+	width: 100%;
+	clear: both;
+}
+
+#history h1 {
+	width: 100%;
+	float: left;
+}
+
+#about {
+	width: 100%;
+	float: left;
+}
+
+#social_icons {
+	width: 100%;
+	height: 6rem;
+	float: left;
+}
+
+#social_icons li {
+	float: left;
+	margin-top: 1rem;
+	/*margin-right: 1.5rem;*/
+}
+
+.social_icon img:hover {
+	-ms-transform: scale(1.0, 1.0); /* IE 9 */
+    -webkit-transform: scale(1.0, 1.0); /* Safari */
+    transform: scale(1.0, 1.0);
+}
+
+.social_icon, .social_icon img {
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	width: 6rem;
+	height: 6rem;
+	-ms-transform: scale(0.9, 0.9); /* IE 9 */
+    -webkit-transform: scale(0.9, 0.9); /* Safari */
+    transform: scale(0.9, 0.9);
+}
+ 
+#history .description {
+	float: right;
+	text-align: right;
+	padding-right: 3rem;
+}
+
+@media (min-width: 650px) {
+
+	#contact {
+	    float:right;
+	    position:relative;
+	    left:-50%;
+	    text-align:left;
+	}
+
+	#contact ul {
+	    list-style: none;
+	    position: relative;
+	    left: 50%;
+	}
+
+	#contact li {
+		float: left;
+		position: relative;
+	}
+
+	#history h2,
+	#history p {
+		width: 50%;
+		padding-right: 2rem;
+		margin: 0 auto;
+		float: none !important;
+		text-align: center;
+	}
+}

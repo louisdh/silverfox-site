@@ -1,0 +1,87 @@
+allow from all
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 week"
+ExpiresByType image/jpeg "access plus 1 week"
+ExpiresByType image/gif "access plus 1 week"
+ExpiresByType image/png "access plus 1 week"
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType text/javascript "access plus 1 week"
+ExpiresByType text/x-javascript "access plus 1 week"
+ExpiresByType text/js "access plus 1 week"
+ExpiresByType text/x-javascript "access plus 1 week"
+ExpiresByType application/x-javascript "access plus 1 week"
+ExpiresByType text/html "access plus 1 hour"
+ExpiresByType application/pdf "access plus 1 hour"
+ExpiresByType image/x-icon "access plus 1 hour"
+ExpiresDefault "access plus 1 week"
+</IfModule>
+## EXPIRES CACHING ##
+
+## ERROR HANDLING ##
+ErrorDocument 403 https://silverfox.be/
+ErrorDocument 404 https://silverfox.be/
+## ERROR HANDLING ##
+
+## REDIRECTS ##
+Options -MultiViews
+Options +FollowSymLinks
+
+RewriteEngine On
+
+## UNCOMMENT THESE 2 LINES FOR PRODUCTION ##
+## REDIRECTS ALL HTTP REQUESTS TO HTTPS COUNTERPART ##
+# RewriteCond %{HTTPS} off
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteRule ^about/css/(.*)$ ^css/$1 [L]
+RewriteRule ^about/img/(.*)$ ^img/$1 [L]
+RewriteRule ^about/js/(.*)$ ^js/$1 [L]
+
+RewriteRule ^games/css/(.*)$ ^css/$1 [L]
+RewriteRule ^games/img/(.*)$ ^img/$1 [L]
+RewriteRule ^games/js/(.*)$ ^js/$1 [L]
+
+RewriteRule ^games/isolation/css/(.*)$ ^css/$1 [L]
+RewriteRule ^games/isolation/img/(.*)$ ^img/$1 [L]
+RewriteRule ^games/isolation/js/(.*)$ ^js/$1 [L]
+RewriteRule ^games/isolation/files/(.*)$ ^files/$1 [L]
+
+RewriteRule ^apps/css/(.*)$ ^css/$1 [L]
+RewriteRule ^apps/img/(.*)$ ^img/$1 [L]
+RewriteRule ^apps/js/(.*)$ ^js/$1 [L]
+
+RewriteRule ^blog/css/(.*)$ ^css/$1 [L]
+RewriteRule ^blog/img/(.*)$ ^img/$1 [L]
+RewriteRule ^blog/js/(.*)$ ^js/$1 [L]
+
+RewriteRule ^news/css/(.*)$ ^css/$1 [L]
+RewriteRule ^news/img/(.*)$ ^img/$1 [L]
+RewriteRule ^news/js/(.*)$ ^js/$1 [L]
+
+## REDIRECTS ##
+RewriteRule ^games/isolation/ isolation.html [L]
+RewriteRule ^games/atomic-tic-tac-toe/ atomic.html [L]
+RewriteRule ^apps/photo-browser/ photobrowser/index.html [L]
+RewriteRule ^apps/partyplanner/privacy/ partyplannerprivacy.html [L]
+RewriteRule ^apps/keyboards/privacy/ keyboard-privacy.html [L]
+
+RewriteRule ^about/ about.html [L]
+RewriteRule ^games/ games.html [L]
+RewriteRule ^apps/ apps.html [L]
+RewriteRule ^news/ news.html [L]
+RewriteRule ^blog/ blog.html [L]
+## REDIRECTS ##
+
+## No html file extensions ##
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+
