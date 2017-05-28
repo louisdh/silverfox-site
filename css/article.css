@@ -122,6 +122,11 @@ pre[class*="language-"] {
 }
 
 .content {
-	padding: 5rem 10rem 1rem 10rem;
+	padding: 5rem 2rem 1rem 2rem;
 }
 
+@media (min-width: 720px) {
+	.content {
+		padding: 5rem 10rem 1rem 10rem;
+	}
+}
