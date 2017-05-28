@@ -34,21 +34,47 @@ This is the first post of the Silver Fox blog, a place where I will share intere
 <h2>Introduction</h2>
 <p>My name is Louis D'hauwe, I'm a Belgian programmer born in the late nineties. I currently work as a full time iOS developer at <a href="http://www.nextapps.be">Next Apps</a>. My full time job plus my side projects can easily add up to about 50 to 60 hours a week of writing or reading code. As of late, most of this code is Swift (though not all!). It'll be of no suprise that most posts will be about some code.</p>
 <h2>Starting a blog in 2017</h2>
-<p>For a couple of years now I've been thinking about starting a blog. Starting one is pretty easy nowadays. <a href="https://medium.com">Medium</a>, <a href="https://www.squarespace.com">Squarespace</a> and others can get you started in a matter of minutes. However, for my blog I wanted full control over the hosting as well as the design.</p>
+<p>For a couple of years now I've been thinking about starting a blog. Starting one is pretty easy nowadays. <a href="https://medium.com">Medium</a>, <a href="https://www.squarespace.com">Squarespace</a> and others can get you started in a matter of minutes. However, for my blog I wanted a little more control.</p>
 <h3>Static content</h3>
-<p>I decided that all I really need are static webpages. I don't need a comment section, or some admin panel to write posts. But obviously writing blogposts in HTML directly is tedious, there's need for an abstraction. The ideal candidate (from a software developer's perspective) is Markdown.</p>
-<p>Each post (including this one) is written in a Markdown file. These are converted to HTML by a Swift command line tool that I wrote myself.</p>
+<p>I decided that all I really need is static webpages. I don't need a comment section, or some admin panel to write posts. But obviously writing blogposts in HTML directly is tedious, there's need for an abstraction. The ideal candidate (from a software developer's perspective) is Markdown.</p>
+<p>Each post (including this one) is written in a Markdown file. These are converted to static HTML pages by a Swift command line tool that I wrote myself.</p>
 <h3>Open source</h3>
 <p>I have open sourced four projects that together make this whole site possible:</p>
 <ul>
-<li>silverfox-site - the HTML, CSS &amp; JavaScript</li>
-<li>silverfox-articles - the blog posts (.md files)</li>
-<li>silverfox-news - news items about my projects (.md files)</li>
-<li>silverfox-gen - generator for the static content</li>
+<li><a href="https://github.com/louisdh/silverfox-site">silverfox-site</a> – the HTML, CSS &amp; JavaScript</li>
+<li><a href="https://github.com/louisdh/silverfox-articles">silverfox-articles</a> – the blog posts (.md files)</li>
+<li><a href="https://github.com/louisdh/silverfox-news">silverfox-news</a> – news items about my projects (.md files)</li>
+<li><a href="https://github.com/louisdh/silverfox-gen">silverfox-gen</a> – generator for the static content</li>
 </ul>
-<p>silverfox-gen is perhaps the most interesting</p>
+<h3>silverfox-gen</h3>
+<p>This is perhaps the most interesting of the four. This is a Swift command line tool that takes its input from silverfox-articles and silverfox-news. It outputs the result to silverfox-site.</p>
+<p>There are five main aspects to silverfox-gen:</p>
+<h4>1. Files</h4>
+<p>Since this takes a bunch of files as input and needs to output generated files, easy file management is essential. To handle this, I used <a href="https://twitter.com/johnsundell">John Sundell</a>'s amazing <a href="https://github.com/JohnSundell/Files">Files</a> framework.</p>
+<h4>2. Markdown support</h4>
+<p>To convert the Markdown to HTML, I decided to use <a href="https://github.com/vapor-community/markdown">Markdown by Vapor Community</a>. This is a Swift wrapper around <a href="https://github.com/github/cmark">cmark</a>, the Markdown parser developed and used by GitHub.</p>
+<h4>3. Syntax highlighting</h4>
+<p>Posts will often include code. But cmark doesn't add syntax highlighting, it only translates the Markdown to HTML. To add syntax highlighting to the static pages, I used <a href="http://prismjs.com">Prism.js</a>. In combination with Apple's <a href="https://developer.apple.com/reference/javascriptcore">JavaScriptCore</a> framework, this enables a nice String extension in Swift to generate HTML with classes for each token to be highlighted. All that's left after that is to add some CSS.</p>
+<h4>4. Dependency manager</h4>
+<p>silverfox-gen was developed to run on macOS. This gave me the opportunity to use the <a href="https://swift.org/package-manager/">Swift Package Manager</a>. The biggest advantage of this is that it's included in Xcode. So there's no need to install a command line tool.</p>
+<h4>5. RSS</h4>
+<p>This blog supports RSS, which requires an xml file to be generated with all the posts. Luckily, Foundation on macOS includes XMLDocument. Using this, I was able to write an RSS feed generator in about 30 minutes.</p>
+<p>An excerpt of the generation code using the Files framework:</p>
+<pre><code class="language-swift">
+<span class="token keyword">let</span> rssFile <span class="token operator">=</span> <span class="token keyword">try</span> outputRoot<span class="token punctuation">.</span><span class="token function">file</span><span class="token punctuation">(</span>atPath<span class="token punctuation">:</span> <span class="token string">"silverfox-rss.xml"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">try</span><span class="token operator">?</span> rssFile<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> rssString <span class="token operator">=</span> <span class="token function">generateRSS</span><span class="token punctuation">(</span><span class="token keyword">for</span><span class="token punctuation">:</span> articles<span class="token punctuation">)</span>
+
+<span class="token keyword">try</span> rssFile<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> rssString<span class="token punctuation">)</span>
+</code></pre>
 <h2>Getting notified</h2>
-<p>If you're interested in this blog, and would like to get notified when a new post is available, the best place is the follow <a href="https://twitter.com/SilverFoxBE">@SilverFoxBE</a> on Twitter.</p>
+<p>If you would like to get notified about new posts, you can:</p>
+<ul>
+<li>Follow <a href="https://twitter.com/SilverFoxBE">@SilverFoxBE</a> on Twitter</li>
+<li>Subscribe to the <a href="http://silverfox.be/silverfox-rss.xml">RSS feed</a></li>
+</ul>
 		</div>
 
 		</div>

@@ -695,3 +695,6 @@ ol span {
 	margin-bottom: 4rem;
 }
 
+.article-content ul {
+	list-style: disc;
+}
