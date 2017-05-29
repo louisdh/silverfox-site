@@ -652,19 +652,22 @@ pre {
 	border-style: solid;
 }
 
-code ::-moz-selection {
-	background-color: orange;
-	color: white;
+pre::-moz-selection, pre code::-moz-selection, pre code .token::-moz-selection {
+	background-color: #35404E;
+	/*color: white;*/
 }
-code ::selection {
-	background-color: orange;
-	color: white;
+
+pre::selection, pre code::selection, pre code .token::selection {
+	background-color: #728398;
+	color: default;
 }
+
 ol {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
+
 ol span {
 	-webkit-user-select: all;
 	-moz-user-select: all;

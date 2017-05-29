@@ -61,7 +61,7 @@ fieldset {
    =========================================== */
 
 /* WebKit/Blink Browsers */
-::selection {
+:not(code) ::selection {
 	background: #d00000; 
 	color: white;
 }
