@@ -173,6 +173,14 @@
 	padding-right: 3rem;
 }
 
+#blog-subscribe {
+	margin-bottom: 1rem;
+	height: 3rem;
+	width: 100%;
+	float: right;
+	text-align: right;
+}
+
 @media (min-width: 650px) {
 
 	#contact {
