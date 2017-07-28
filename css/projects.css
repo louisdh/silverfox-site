@@ -1,32 +1,36 @@
 
 .tile:nth-of-type(1) {
-	background-image: url('../img/projects/tile_panelkit.png');
+	background-image: url('../img/projects/tile_lioness.png');
 }
 
 .tile:nth-of-type(2) {
-	background-image: url('../img/apps/tile_pixure.png');
+	background-image: url('../img/projects/tile_panelkit.png');
 }
 
 .tile:nth-of-type(3) {
-	background-image: url('../img/apps/tile_leet_keyboard.png');
+	background-image: url('../img/apps/tile_pixure.png');
 }
 
 .tile:nth-of-type(4) {
-	background-image: url('../img/games/tile_isolation.png');
+	background-image: url('../img/apps/tile_leet_keyboard.png');
 }
 
 .tile:nth-of-type(5) {
-	background-image: url('../img/games/tile_atomic3.png');
+	background-image: url('../img/games/tile_isolation.png');
 }
 
 .tile:nth-of-type(6) {
-  background-image: url('../img/games/tile_packager.png');
+	background-image: url('../img/games/tile_atomic3.png');
 }
 
 .tile:nth-of-type(7) {
-	background-image: url('../img/research/bb_8_poster_frame.jpg');
+  background-image: url('../img/games/tile_packager.png');
 }
 
 .tile:nth-of-type(8) {
+	background-image: url('../img/research/bb_8_poster_frame.jpg');
+}
+
+.tile:nth-of-type(9) {
 	background-image: url('../img/research/glsl_swift.jpg');
 }
