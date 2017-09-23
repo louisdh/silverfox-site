@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" href="../img/favicon.png" type="image/png" />
+		<meta charset="UTF-8">
+		<title>The mysterious missingLinuxMain error in Swift 4</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:image" content="https://silverfox.be/img/fb-share.png"/>
+		<meta name="description" content="Recently I upgraded my open source projects to Swift 4, including Lioness." />
+		<link href="../css/library.css" rel="stylesheet">
+		<link href="../css/lightbox.css" rel="stylesheet" />
+		<link href="../css/general.css" rel="stylesheet">
+		<link href="../css/content.pages.general.css" rel="stylesheet">
+		<link href="../css/index.css" rel="stylesheet">
+		<link href="../css/article-general.css" rel="stylesheet">
+		<link href="../css/article.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="wrapper">
+				<ul>
+					<li><a href="/" class="ir" >Silver Fox</a></li>
+					<li class="active"><a href="/blog/">Blog</a></li>
+					<li><a href="/projects/">Projects</a></li>
+					<li><a href="/news/">News</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="content clearfix"><div class="article-content">
+<div align="center" class="article-metadata">
+	<h1> The mysterious missingLinuxMain error in Swift 4</h1>
+	<p class="article-metadata-date">Saturday, 23 September 2017</p>
+	<p class="article-metadata-author">by Louis D'hauwe</p>
+	<p class="article-metadata-tags">tags: blog, linux, lioness, open source, swift</p>
+</div>
+<p>Recently I upgraded my open source projects, including <a href="https://github.com/louisdh/lioness">Lioness</a>, to Swift 4.<br />
+What's somewhat special about Lioness is that it supports Linux. Which gave me a rather strange error when upgrading it to Swift 4: <code>missingLinuxMain</code>.</p>
+<p><img src="img/swift-build-missingLinuxMain.png" alt="Swift build command giving the &quot;missingLinuxMain&quot; error" /></p>
+<p><em>(The <code>swift build</code> command is ran by Travis-CI on each commit to make sure Lioness still compiles as a Swift package on Linux.)</em></p>
+<p>The weird thing is that the <code>swift build</code> command worked fine with Swift 3. As I'm sure most developers would do, the first thing I tried is to Google this error. But that gave me the following disappointing result:<br />
+<img src="img/missingLinuxMain-google-empty.png" alt="" /><br />
+Appearantly no-one had ever put anything about this error on the internet. So I decided I would, with the blog post you're reading as a result.</p>
+<h2>The solution</h2>
+<p>Starting with Swift 4, it is expected that you have a <code>LinuxMain.swift</code> file in the <code>Tests</code> folder of your Swift package. This file is intended to include the unit tests you want to run on Linux for your Swift package. I didn't run the unit tests of Lioness on Linux at the time of writing, which is why I never bothered adding it. To be clear: the <code>LinuxMain.swift</code> file may be empty, but it's required to exist if you want the Swift Package Manager commands to work.</p>
+<hr />
+<p>If you would like to get notified about new posts, you can:</p>
+<ul>
+<li>Follow <a href="https://twitter.com/SilverFoxBE">@SilverFoxBE</a> on Twitter</li>
+<li>Subscribe to the <a href="http://silverfox.be/silverfox-rss.xml">RSS feed</a></li>
+</ul>
+		</div>
+
+		</div>
+		<footer>
+			<div class="wrapper">
+				<p>&copy;2017 Silver Fox. All rights reserved.</p>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../js/lightbox.min.js"></script>
+		<script src="../js/retina.min.js"></script>
+		<script src="../js/general.js"></script>
+		<script async src="../js/tracking.js"></script>
+		<script src="../js/content.pages.general.js"></script>
+		<script src="../js/about.js"></script>
+	</body>
+</html>
