@@ -26,7 +26,6 @@
 	height: 20rem;
 	background-color: #eee;
 	margin: 2rem auto;
-	padding: 0rem 1rem 0rem 1rem;
 
 
 	border-radius: 3rem;
@@ -50,6 +49,10 @@
 
    	/* http://stackoverflow.com/questions/5736503/how-to-make-css3-rounded-corners-hide-overflow-in-chrome-opera */
    	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+.tile p, .tile h3 {
+	padding: 0rem 1rem 0rem 1rem;
 }
 
 .tile a {
