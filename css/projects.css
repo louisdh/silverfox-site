@@ -1,6 +1,6 @@
 
 .tile:nth-of-type(1) {
-	background-image: url('../img/projects/tile_terminal.png');
+	background-image: url('../img/projects/tile_openterm.png');
 }
 .tile:nth-of-type(2) {
 	background-image: url('../img/projects/tile_lioness.png');
