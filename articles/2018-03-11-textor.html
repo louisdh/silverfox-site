@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" href="../img/favicon.png" type="image/png" />
+		<meta charset="UTF-8">
+		<title>Textor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:image" content="https://silverfox.be/img/fb-share.png"/>
+		<meta name="description" content="Today I'm releasing Textor, a plain text editor for iOS." />
+		<link href="../css/library.css" rel="stylesheet">
+		<link href="../css/lightbox.css" rel="stylesheet" />
+		<link href="../css/general.css" rel="stylesheet">
+		<link href="../css/content.pages.general.css" rel="stylesheet">
+		<link href="../css/index.css" rel="stylesheet">
+		<link href="../css/article-general.css" rel="stylesheet">
+		<link href="../css/article.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="wrapper">
+				<ul>
+					<li><a href="/" class="ir" >Silver Fox</a></li>
+					<li class="active"><a href="/blog/">Blog</a></li>
+					<li><a href="/projects/">Projects</a></li>
+					<li><a href="/news/">News</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="content clearfix"><div class="article-content">
+<div align="center" class="article-metadata">
+	<h1> Textor</h1>
+	<p class="article-metadata-date">Sunday, 11 March 2018</p>
+	<p class="article-metadata-author">by Louis D&#39;hauwe</p>
+	<p class="article-metadata-tags">tags: blog&#44; ios&#44; swift&#44; textor</p>
+</div>
+<p>Today I'm releasing <a href="https://itunes.apple.com/app/textor/id1330406995?mt=8&amp;at=1010lII4">Textor</a>, a plain text editor for iOS. I started this project while creating <a href="https://silverfox.be/articles/2018-01-20-openterm.html">OpenTerm</a>. I was surprised to learn that iOS doesn't have an app to open .txt files out of the box. Even Pages doesn't allow you to open and save .txt files.</p>
+<p>Textor is fully optimized for iOS 11 with the system documents browser. It's a very simple, yet essential, app, which is why it's free.</p>
+<p>Technically, Textor is a couple of system APIs glued together:</p>
+<pre><code class="language-swift">
+<span class="token builtin">Textor</span> <span class="token operator">=</span> <span class="token builtin">UIDocument</span> <span class="token operator">+</span> <span class="token builtin">UIDocumentBrowserViewController</span> <span class="token operator">+</span> <span class="token builtin">UITextView</span>
+</code></pre>
+<p>Textor is <a href="https://itunes.apple.com/app/textor/id1330406995?mt=8&amp;at=1010lII4">available on the App Store</a>.</p>
+<hr />
+<p>If you would like to get notified about new posts, you can:</p>
+<ul>
+<li>Follow <a href="https://twitter.com/SilverFoxBE">@SilverFoxBE</a> on Twitter</li>
+<li>Subscribe to the <a href="http://silverfox.be/silverfox-rss.xml">RSS feed</a></li>
+</ul>
+		</div>
+
+		</div>
+		<footer>
+			<div class="wrapper">
+				<p>&copy;2018 Silver Fox. All rights reserved.</p>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../js/lightbox.min.js"></script>
+		<script src="../js/retina.min.js"></script>
+		<script src="../js/general.js"></script>
+		<script async src="../js/tracking.js"></script>
+		<script src="../js/content.pages.general.js"></script>
+		<script src="../js/about.js"></script>
+	</body>
+</html>
