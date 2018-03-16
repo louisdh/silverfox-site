@@ -36,13 +36,9 @@
 }
 
 .tile:nth-of-type(10) {
-  background-image: url('../img/games/tile_packager.png');
-}
-
-.tile:nth-of-type(11) {
 	background-image: url('../img/research/bb_8_poster_frame.jpg');
 }
 
-.tile:nth-of-type(12) {
+.tile:nth-of-type(11) {
 	background-image: url('../img/research/glsl_swift.jpg');
 }
